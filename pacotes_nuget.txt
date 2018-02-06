@@ -1,0 +1,10 @@
+Pacotes que devem ser instalados:
+
+Newtonsoft.Json
+NUnit
+Selenium.WebDriver
+SpecFlow
+SpecFlow.NUnit
+NUnit3TestAdapter
+Selenium.Firefox.WebDriver  //se for no Firefox
+Selenium.Chrome.WebDriver   //se for no Chrome

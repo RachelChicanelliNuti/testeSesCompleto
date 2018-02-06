@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B69EBE3-8FDA-48BA-9F21-D97E17D6C514}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>teste_ses_completo</RootNamespace>
+    <AssemblyName>teste_ses_completo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1-beta3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.3.0-preview20180201\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SVS\Features\ListarEstabelecimento.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListarEstabelecimento.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\EmitirRelatorioUsuarioSteps.cs" />
+    <Compile Include="SVS\Features\EmitirRelatorioLocalidade.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmitirRelatorioLocalidade.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\EmitirRelatorioUsuario.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmitirRelatorioUsuario.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\BloquearUsuarioSteps.cs" />
+    <Compile Include="SVS\Features\AtualizarDados.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtualizarDados.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\BloquearUsuario.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BloquearUsuario.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\AdicionarNovoEstabelecimentoSteps.cs" />
+    <Compile Include="SVS\Features\AdicionarNotificacao.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdicionarNotificacao.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\AdicionarNovoEstabelecimento.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdicionarNovoEstabelecimento.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\AdicionarNotificacaoSteps.cs" />
+    <Compile Include="SVS\Steps\AtualizarUsuarioSteps.cs" />
+    <Compile Include="SVS\Steps\EmitirRelatorioLocalidadeSteps.cs" />
+    <Compile Include="SVS\Steps\LiberarCadastroSteps.cs" />
+    <Compile Include="SVS\Features\EfetuarLoginNovoUsuario.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EfetuarLoginNovoUsuario.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\LiberarCadastro.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiberarCadastro.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\AutenticarNoSistemaAdministradorSteps.cs" />
+    <Compile Include="SVS\Features\AutenticarAdministradorParaDesbloquear.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutenticarAdministradorParaDesbloquear.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\SolicitarCadastro.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolicitarCadastro.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Steps\AutenticarNoSistemaComoNovoUsuarioSteps.cs" />
+    <Compile Include="SVS\Steps\AutenticarNoSistemaSteps.cs" />
+    <Compile Include="SVS\Features\AutenticarSeNoSistema.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutenticarSeNoSistema.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SVS\Features\CadastrarUsuario.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadastrarUsuario.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVS\Steps\CadastrarSteps.cs" />
+    <Compile Include="SVS\Steps\SolicitarCadastroSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="SVS\Features\AdicionarNotificacao.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AdicionarNotificacao.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\AdicionarNovoEstabelecimento.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AdicionarNovoEstabelecimento.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\AtualizarDados.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AtualizarDados.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\AutenticarAdministradorParaDesbloquear.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutenticarAdministradorParaDesbloquear.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\AutenticarSeNoSistema.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutenticarSeNoSistema.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\BloquearUsuario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BloquearUsuario.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\CadastrarUsuario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CadastrarUsuario.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="SVS\Features\EfetuarLoginNovoUsuario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EfetuarLoginNovoUsuario.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\EmitirRelatorioLocalidade.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EmitirRelatorioLocalidade.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\EmitirRelatorioUsuario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EmitirRelatorioUsuario.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\LiberarCadastro.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LiberarCadastro.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\ListarEstabelecimento.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ListarEstabelecimento.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SVS\Features\SolicitarCadastro.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SolicitarCadastro.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IndicaSUS\Features\" />
+    <Folder Include="IndicaSUS\Steps\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.35\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.35\build\Selenium.Chrome.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.35\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.35\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.3.0-preview20180201\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.3.0-preview20180201\build\SpecFlow.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <Import Project="..\packages\SpecFlow.2.3.0-preview20180201\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.3.0-preview20180201\build\SpecFlow.targets')" />
+</Project>
